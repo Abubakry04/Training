@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - Mini Wallet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Login to Your Wallet</h1>
+
+  <form id="loginForm">
+    <input type="text" id="username" placeholder="Username" required><br><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent page reload
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if(username === 'user' && password === 'pass123') {
+        alert('Login successful!');
+        window.location.href = 'index.html'; // Redirect to wallet page
+      } else {
+        alert('Invalid username or password.');
+      }
+    });
+  </script>
+</body>
+</html>
